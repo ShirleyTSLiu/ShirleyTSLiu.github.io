@@ -26,5 +26,5 @@ def disp_detail(request, stock):
 	try:
 		p = Stock.objects.get(stock=stock)
 	except Stock.DoesNotExist:
-		raise Http404('找不到指定的品項編號')
+		raise Http404('Http404')
 	return render(request, 'disp.html', locals())
